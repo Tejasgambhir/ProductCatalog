@@ -10,7 +10,6 @@ export const CartProvider = ({ children }) => {
         const stockData = JSON.parse(localStorage.getItem('productStock')) || {};
         if(stockData[product.id]>0){
             stockData[product.id]--;
-            console.log("cartcontext", stockData);
             localStorage.setItem('productStock', JSON.stringify(stockData));
         }
 
@@ -32,7 +31,7 @@ export const CartProvider = ({ children }) => {
             stockData[productId]++;
             localStorage.setItem('productStock', JSON.stringify(stockData));
         }
-        
+
         setCart(prevCart => {
           
         const existingItem = prevCart.find(item => item.id === productId);

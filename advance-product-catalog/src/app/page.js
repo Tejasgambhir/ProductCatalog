@@ -26,7 +26,6 @@ const ProductList = () => {
   useEffect(() => {
   fetchCategories();
   fetchProducts();
- 
   startStockPolling();
 }, []);
 

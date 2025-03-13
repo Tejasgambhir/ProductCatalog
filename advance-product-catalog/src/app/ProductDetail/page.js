@@ -47,7 +47,7 @@ const ProductDetail = ({ id = 1 }) => {
             </Link>
             <div className="flex items-center space-x-4">
               <div className="relative">
-                <Link href={`/carts`}>
+                <Link href={`/Carts`}>
                   <span className="text-lg font-bold">Cart</span>
                 </Link>
                 {cart.length > 0 && (
